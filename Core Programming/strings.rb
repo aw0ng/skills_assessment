@@ -12,13 +12,18 @@
 
 # 3. Write a program that asks the user to input a word. If the word is "marco", print "polo".
 
-puts "Enter a word: "
-word = gets.chomp
-if word == "marco"
-  puts "polo"
-end
+# puts "Enter a word: "
+# word = gets.chomp
+# if word == "marco"
+#   puts "polo"
+# end
 
 # 4. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string concatenation (the + operator).
+
+color1 = "red"
+color2 = "yellow"
+color3 = "green"
+p "The traffic light goes from" + " " + color1 + " " + "to" + " " + color2 + " " + "to" + " " + color3 + "."
 
 # 5. Write a program that uses variables to store three different colors, then prints out a sentence using the colors with string interpolation (the #{} operator).
 
