@@ -34,6 +34,12 @@
 
 # 6. Write a program that asks the user to enter a name. If the name is not "Santa", print "You're not Santa."
 
+p "What is your name?"
+input = gets.chomp
+if input != "Santa"
+  p "You're not Santa."
+end
+
 # 7. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string concatenation (the + operator).
 
 # 8. Write a program that uses variables to store a book's title and author, then prints out a sentence using that information with string interpolation (the #{} operator).
