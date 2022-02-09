@@ -46,13 +46,18 @@
 
 # 8. Write a program that asks the user to enter a number, then prints "That's a negative number" if the number is less than 0.
 
-puts "enter a number"
-input = gets.chomp
-if input.to_i < 0
-  p "That's a negative number"
-end
+# puts "enter a number"
+# input = gets.chomp
+# if input.to_i < 0
+#   p "That's a negative number"
+# end
 
 # 9. Write a program that asks the user to enter two numbers, then prints the two numbers multiplied together.
+
+puts "enter 2 numbers"
+num1 = gets.chomp
+num2 = gets.chomp
+p num1.to_i * num2.to_i
 
 # 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
 
