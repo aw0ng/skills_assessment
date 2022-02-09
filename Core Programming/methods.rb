@@ -54,12 +54,17 @@
 
 # 9. Write a program that asks the user to enter two numbers, then prints the two numbers multiplied together.
 
-puts "enter 2 numbers"
-num1 = gets.chomp
-num2 = gets.chomp
-p num1.to_i * num2.to_i
+# puts "enter 2 numbers"
+# num1 = gets.chomp
+# num2 = gets.chomp
+# p num1.to_i * num2.to_i
 
 # 10. Write a program that asks the user to enter a word, then prints "That's a long word" if the word has more than 5 letters.
 
+puts "enter a word"
+input = gets.chomp
+if input.length > 5
+  p "That's a long word"
+end
 
 # SOLUTIONS: https://gist.github.com/peterxjang/1539a3ad79728ba4fb68dd8d07279c29
