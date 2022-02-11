@@ -1,11 +1,15 @@
 # 1. Create an array to store 3 words. Then add two more words to the array and print the array on one line.
 
-words = ["one", "two", "three"]
-words << "four"
-words << "five"
-p words
+# words = ["one", "two", "three"]
+# words << "four"
+# words << "five"
+# p words
 
 # 2. Create an array to store 4 letters. Then change the second letter to a number and print the array on one line.
+
+letters = ["a", "b", "c", "d"]
+letters[1] = 1
+p letters
 
 # 3. Create an array to store 5 numbers. Then print out each number on separate lines with a while loop.
 
