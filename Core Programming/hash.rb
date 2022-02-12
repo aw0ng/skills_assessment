@@ -36,15 +36,20 @@
 
 # 5. Make an array of hashes to store the title and author for 3 different books. Then print out the third book's author.
 
-books = [
-  { "title" => "Hail Mary", "author" => "Andy Weird" },
-  { "title" => "The Color Purple", "author" => "Alice Walker" },
-  { "title" => "The Sum of Us", "author" => "Heather McGee" }
-]
+# books = [
+#   { "title" => "Hail Mary", "author" => "Andy Weird" },
+#   { "title" => "The Color Purple", "author" => "Alice Walker" },
+#   { "title" => "The Sum of Us", "author" => "Heather McGee" }
+# ]
 
-p books[2]["author"]
+# p books[2]["author"]
 
-# 6. Make a hash to store 3 different states and their captitals. Then add a new state and capital and print the hash to see the result.
+# 6. Make a hash to store 3 different states and their capitals. Then add a new state and capital and print the hash to see the result.
+
+capitals = { "NY" => "Albany", "NJ" => "Trenton", "PA" => "Harrisburg" }
+
+capitals["CT"] = "Hartford"
+p capitals
 
 # 7. Make a hash to store a laptop's brand, model, and year. Then print each attribute on separate lines.
 
