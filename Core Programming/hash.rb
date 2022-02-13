@@ -69,11 +69,15 @@
 
 # 9. Make a hash to store definitions for 2 different words. Then add a new word and definition and print the hash to see the result.
 
-words = { "word1" => "definition1", "word2" => "definition2" }
-words["word3"] = "definition3"
-p words
+# words = { "word1" => "definition1", "word2" => "definition2" }
+# words["word3"] = "definition3"
+# p words
 
 # 10. Make a hash to store a shirt's brand, color, and size. Then print each attribute on separate lines.
 
+shirt = { "brand" => "patagonia", "color" => "green", "size" => "s" }
+p shirt["brand"]
+p shirt["color"]
+p shirt["size"]
 
 # SOLUTIONS: https://gist.github.com/peterxjang/d257aec07882d78009bd796ed53f81bb
