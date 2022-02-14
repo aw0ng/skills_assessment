@@ -65,13 +65,19 @@
 
 # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
 
-def average(x, y, z)
-  return (x + y + z) / 3.0
-end
+# def average(x, y, z)
+#   return (x + y + z) / 3.0
+# end
 
-p average(4, 6, 8)
+# p average(4, 6, 8)
 
 # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
 
+
+def times_plus(number)
+  return (number * 10) + 30
+end
+
+p times_plus(7)
 
 # SOLUTIONS: https://gist.github.com/peterxjang/6a26d3c698c651dd6e9ccb168d32648c
