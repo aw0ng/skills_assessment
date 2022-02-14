@@ -16,13 +16,19 @@
 
 # 3. Write a function that takes in two numbers and returns the first number subtracted by the second. Then run the function and print the result.
 
-def subtract(x, y)
-  return x - y
-end
+# def subtract(x, y)
+#   return x - y
+# end
 
-p subtract(9, 4)
+# p subtract(9, 4)
 
 # 4. Write a function that takes in a number and returns the number times itself. Then run the function and print the result.
+
+def squared(number)
+  return number * number
+end
+
+p squared(6)
 
 # 5. Write a function that takes in a string and returns the first letter of the string. Then run the function and print the result.
 
