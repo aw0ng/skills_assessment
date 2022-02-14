@@ -57,13 +57,19 @@
 
 # 8. Write a function that takes in a string and returns the string repeated 5 times. Then run the function and print the result.
 
-def five_times(string)
-  return string * 5
-end
+# def five_times(string)
+#   return string * 5
+# end
 
-p five_times("orange")
+# p five_times("orange")
 
 # 9. Write a function that takes in 3 numbers and returns the average (the sum divided by 3.0). Then run the function and print the result.
+
+def average(x, y, z)
+  return (x + y + z) / 3.0
+end
+
+p average(4, 6, 8)
 
 # 10. Write a function that takes in a number and returns the number times 10 plus 30. Then run the function and print the result.
 
