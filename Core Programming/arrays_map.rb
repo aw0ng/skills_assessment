@@ -33,34 +33,60 @@
 #  2. Start with an array of strings and create a new array with each string upcased.
 #     For example, ["hello", "goodbye"] becomes ["HELLO", "GOODBYE"].
 
-strings = ["apple", "orange", "banana"]
-up_strings = []
-i = 0
-while i < strings.length
-  up_strings << strings[i].upcase
-  i += 1
-end
+# strings = ["apple", "orange", "banana"]
+# up_strings = []
+# i = 0
+# while i < strings.length
+#   up_strings << strings[i].upcase
+#   i += 1
+# end
 
-p up_strings
+# p up_strings
 
-strings2 = ["apple", "orange", "banana"]
-up_strings2 = []
+# strings2 = ["apple", "orange", "banana"]
+# up_strings2 = []
 
-strings2.each do |string|
-  up_strings2 << string.upcase
-end
+# strings2.each do |string|
+#   up_strings2 << string.upcase
+# end
 
-p up_strings2
+# p up_strings2
 
-strings3 = ["apple", "orange", "banana"]
-up_strings3 = strings3.map do |string|
-  string.upcase
-end
+# strings3 = ["apple", "orange", "banana"]
+# up_strings3 = strings3.map do |string|
+#   string.upcase
+# end
 
-p up_strings3
+# p up_strings3
 
 #  3. Start with an array of hashes and create a new array of string values from each hash's :name key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes ["Alice", "Blane"].
+
+people = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+names = []
+i = 0
+while i < people.length
+  names << people[i][:name]
+  i += 1
+end
+
+p names
+
+people2 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+names2 = []
+
+people2.each do |people|
+  names2 << people[:name]
+end
+
+p names2
+
+people3 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+names3 = people3.map do |people|
+  people[:name]
+end
+
+p names3
 
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
