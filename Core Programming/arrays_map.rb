@@ -88,30 +88,52 @@
 #  4. Start with an array of numbers and create a new array with each number plus 7.
 #     For example, [1, 2, 3] becomes [8, 9, 10].
 
-nums = [4, 5, 6]
-new_nums = []
-i = 0
-while i < nums.length
-  new_nums << nums[i] + 7
-  i += 1
-end
-p new_nums
+# nums = [4, 5, 6]
+# new_nums = []
+# i = 0
+# while i < nums.length
+#   new_nums << nums[i] + 7
+#   i += 1
+# end
+# p new_nums
 
-nums2 = [4, 5, 6]
-new_nums2 = []
-nums2.each do |num|
-  new_nums2 << num + 7
-end
-p new_nums2
+# nums2 = [4, 5, 6]
+# new_nums2 = []
+# nums2.each do |num|
+#   new_nums2 << num + 7
+# end
+# p new_nums2
 
-nums3 = [4, 5, 6]
-new_nums3 = nums3.map do |num|
-  num + 7
-end
-p new_nums3
+# nums3 = [4, 5, 6]
+# new_nums3 = nums3.map do |num|
+#   num + 7
+# end
+# p new_nums3
 
 #  5. Start with an array of strings and create a new array with each string's length.
 #     For example, ["hello", "goodbye"] becomes [5, 7].
+
+strings = ["apple", "banana", "orange"]
+count = []
+i = 0
+while i < strings.length
+  count << strings[i].length
+  i += 1
+end
+p count
+
+strings2 = ["apple", "banana", "orange"]
+count2 = []
+strings2.each do |string|
+  count2 << string.length
+end
+p count2
+
+strings3 = ["apple", "banana", "orange"]
+count3 = strings3.map do |string|
+  string.length
+end
+p count3
 
 #  6. Start with an array of hashes and create a new array of number values from each hash's :age key.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [27, 16].
