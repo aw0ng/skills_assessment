@@ -163,30 +163,52 @@
 #  7. Start with an array of numbers and create a new array with each number divided by 2.
 #     For example, [1, 2, 3] becomes [0.5, 1.0, 1.5].
 
-nums = [3, 4, 5]
-new_nums = []
-i = 0
-while i < nums.length
-  new_nums << nums[i] / 2.0
-  i += 1
-end
-p new_nums
+# nums = [3, 4, 5]
+# new_nums = []
+# i = 0
+# while i < nums.length
+#   new_nums << nums[i] / 2.0
+#   i += 1
+# end
+# p new_nums
 
-nums2 = [3, 4, 5]
-new_nums2 = []
-nums2.each do |num|
-  new_nums2 << num / 2.0
-end
-p new_nums2
+# nums2 = [3, 4, 5]
+# new_nums2 = []
+# nums2.each do |num|
+#   new_nums2 << num / 2.0
+# end
+# p new_nums2
 
-nums3 = [3, 4, 5]
-new_nums3 = nums3.map do |num|
-  num / 2.0
-end
-p new_nums3
+# nums3 = [3, 4, 5]
+# new_nums3 = nums3.map do |num|
+#   num / 2.0
+# end
+# p new_nums3
 
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
+
+strings = ["apple", "banana", "orange"]
+letters = []
+i = 0
+while i < strings.length
+  letters << strings[i][0]
+  i += 1
+end
+p letters
+
+strings2 = ["apple", "banana", "orange"]
+letters2 = []
+strings2.each do |string|
+  letters2 << string[0]
+end
+p letters2
+
+strings3 = ["apple", "banana", "orange"]
+letters3 = strings3.map do |string|
+  string[0]
+end
+p letters3
 
 # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
