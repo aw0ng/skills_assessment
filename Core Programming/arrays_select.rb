@@ -61,34 +61,60 @@
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
 
-items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-expensive_items = []
-i = 0
-while i < items.length
-  if items[i][:price] > 5
-    expensive_items << items[i]
-  end
-  i += 1
-end
-p expensive_items
+# items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# expensive_items = []
+# i = 0
+# while i < items.length
+#   if items[i][:price] > 5
+#     expensive_items << items[i]
+#   end
+#   i += 1
+# end
+# p expensive_items
 
-items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-expensive_items2 = []
-items2.each do |item|
-  if item[:price] > 5
-    expensive_items2 << item
-  end
-end
-p expensive_items2
+# items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# expensive_items2 = []
+# items2.each do |item|
+#   if item[:price] > 5
+#     expensive_items2 << item
+#   end
+# end
+# p expensive_items2
 
-items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-expensive_items3 = items3.select do |item|
-  item[:price] > 5
-end
-p expensive_items3
+# items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# expensive_items3 = items3.select do |item|
+#   item[:price] > 5
+# end
+# p expensive_items3
 
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
+
+nums = [2, 4, 5, 1, 8, 9, 7]
+evens = []
+i = 0
+while i < nums.length
+  if nums[i] % 2 == 0
+    evens << nums[i]
+  end
+  i += 1
+end
+p evens
+
+nums2 = [2, 4, 5, 1, 8, 9, 7]
+evens2 = []
+nums2.each do |num|
+  if num % 2 == 0 
+    evens2 << num
+  end
+end
+p evens2
+
+nums3 = [2, 4, 5, 1, 8, 9, 7]
+evens3 = nums3.select do |num|
+  num % 2 == 0
+end
+p evens3
 
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
