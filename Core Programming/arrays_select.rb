@@ -32,34 +32,60 @@
 #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
 #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
 
-strings = ["winner", "winner", "chicken", "dinner"]
-w = []
-i = 0
-while i < strings.length
-  if strings[i][0] == "w"
-    w << strings[i]
-  end
-  i += 1
-end
-p w
+# strings = ["winner", "winner", "chicken", "dinner"]
+# w = []
+# i = 0
+# while i < strings.length
+#   if strings[i][0] == "w"
+#     w << strings[i]
+#   end
+#   i += 1
+# end
+# p w
 
-strings2 = ["winner", "winner", "chicken", "dinner"]
-w2 = []
-strings2.each do |string|
-  if string[0] == "w"
-    w2 << string
-  end
-end
-p w2
+# strings2 = ["winner", "winner", "chicken", "dinner"]
+# w2 = []
+# strings2.each do |string|
+#   if string[0] == "w"
+#     w2 << string
+#   end
+# end
+# p w2
 
-strings3 = ["winner", "winner", "chicken", "dinner"]
-w3 = strings3.select do |string|
-  string[0] == "w"
-end
-p w3
+# strings3 = ["winner", "winner", "chicken", "dinner"]
+# w3 = strings3.select do |string|
+#   string[0] == "w"
+# end
+# p w3
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
+
+items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+expensive_items = []
+i = 0
+while i < items.length
+  if items[i][:price] > 5
+    expensive_items << items[i]
+  end
+  i += 1
+end
+p expensive_items
+
+items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+expensive_items2 = []
+items2.each do |item|
+  if item[:price] > 5
+    expensive_items2 << item
+  end
+end
+p expensive_items2
+
+items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+expensive_items3 = items3.select do |item|
+  item[:price] > 5
+end
+p expensive_items3
 
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
