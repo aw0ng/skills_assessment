@@ -256,6 +256,6 @@ p strings2
 
 nums3 = [7, 8, 9]
 strings3 = nums3.map do |num|
-  num.to_s
+  strings3 << num.to_s
 end
 p strings3

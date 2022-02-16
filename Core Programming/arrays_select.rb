@@ -90,34 +90,60 @@
 #  4. Start with an array of numbers and create a new array with only the even numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [2, 4, 8].
 
-nums = [2, 4, 5, 1, 8, 9, 7]
-evens = []
-i = 0
-while i < nums.length
-  if nums[i] % 2 == 0
-    evens << nums[i]
-  end
-  i += 1
-end
-p evens
+# nums = [2, 4, 5, 1, 8, 9, 7]
+# evens = []
+# i = 0
+# while i < nums.length
+#   if nums[i] % 2 == 0
+#     evens << nums[i]
+#   end
+#   i += 1
+# end
+# p evens
 
-nums2 = [2, 4, 5, 1, 8, 9, 7]
-evens2 = []
-nums2.each do |num|
-  if num % 2 == 0 
-    evens2 << num
-  end
-end
-p evens2
+# nums2 = [2, 4, 5, 1, 8, 9, 7]
+# evens2 = []
+# nums2.each do |num|
+#   if num % 2 == 0 
+#     evens2 << num
+#   end
+# end
+# p evens2
 
-nums3 = [2, 4, 5, 1, 8, 9, 7]
-evens3 = nums3.select do |num|
-  num % 2 == 0
-end
-p evens3
+# nums3 = [2, 4, 5, 1, 8, 9, 7]
+# evens3 = nums3.select do |num|
+#   num % 2 == 0
+# end
+# p evens3
 
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
+
+strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
+short_strings = []
+i = 0
+while i < strings.length
+  if strings[i].length < 4
+    short_strings << strings[i]
+  end
+  i += 1
+end
+p short_strings
+
+strings2 = ["a", "man", "a", "plan", "a", "canal", "panama"]
+short_strings2 = []
+strings2.each do |string|
+  if string.length < 4
+    short_strings2 << string
+  end
+end
+p short_strings2
+
+strings3 = ["a", "man", "a", "plan", "a", "canal", "panama"]
+short_strings3 = strings3.select do |string|
+  string.length < 4
+end
+p short_strings3
 
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
