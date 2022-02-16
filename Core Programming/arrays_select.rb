@@ -3,34 +3,60 @@
 #  1. Start with an array of numbers and create a new array with only the numbers less than 20.
 #     For example, [2, 32, 80, 18, 12, 3] becomes [2, 18, 12, 3].
 
-nums = [2, 32, 80, 18, 12, 3]
-new_nums = []
-i = 0
-while i < nums.length
-  if nums[i] < 20
-    new_nums << nums[i]
-  end
-  i += 1
-end
-p new_nums
+# nums = [2, 32, 80, 18, 12, 3]
+# new_nums = []
+# i = 0
+# while i < nums.length
+#   if nums[i] < 20
+#     new_nums << nums[i]
+#   end
+#   i += 1
+# end
+# p new_nums
 
-nums2 = [2, 32, 80, 18, 12, 3]
-new_nums2 = []
-nums2.each do |num|
-  if num < 20
-    new_nums2 << num
-  end
-end
-p new_nums2
+# nums2 = [2, 32, 80, 18, 12, 3]
+# new_nums2 = []
+# nums2.each do |num|
+#   if num < 20
+#     new_nums2 << num
+#   end
+# end
+# p new_nums2
 
-nums3 = [2, 32, 80, 18, 12, 3]
-new_nums3 = nums3.select do |num|
-  num < 20
-end
-p new_nums3
+# nums3 = [2, 32, 80, 18, 12, 3]
+# new_nums3 = nums3.select do |num|
+#   num < 20
+# end
+# p new_nums3
 
 #  2. Start with an array of strings and create a new array with only the strings that start with the letter "w".
 #     For example, ["winner", "winner", "chicken", "dinner"] becomes ["winner", "winner"].
+
+strings = ["winner", "winner", "chicken", "dinner"]
+w = []
+i = 0
+while i < strings.length
+  if strings[i][0] == "w"
+    w << strings[i]
+  end
+  i += 1
+end
+p w
+
+strings2 = ["winner", "winner", "chicken", "dinner"]
+w2 = []
+strings2.each do |string|
+  if string[0] == "w"
+    w2 << string
+  end
+end
+p w2
+
+strings3 = ["winner", "winner", "chicken", "dinner"]
+w3 = strings3.select do |string|
+  string[0] == "w"
+end
+p w3
 
 #  3. Start with an array of hashes and create a new array with only the hashes with prices greater than 5 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}].
