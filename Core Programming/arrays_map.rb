@@ -213,27 +213,49 @@
 # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
 
-people = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
-ages = []
-i = 0
-while i < people.length
-  ages << people[i][:age] * 2
-  i += 1
-end
-p ages
+# people = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+# ages = []
+# i = 0
+# while i < people.length
+#   ages << people[i][:age] * 2
+#   i += 1
+# end
+# p ages
 
-people2 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
-ages2 = []
-people2.each do |people|
-  ages2 << people[:age] * 2
-end
-p ages2
+# people2 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+# ages2 = []
+# people2.each do |people|
+#   ages2 << people[:age] * 2
+# end
+# p ages2
 
-people3 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
-ages3 = people3.map do |people|
-  people[:age] * 2
-end
-p ages3
+# people3 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+# ages3 = people3.map do |people|
+#   people[:age] * 2
+# end
+# p ages3
 
 # 10. Start with an array of numbers and create a new array with each number converted into a string.
 #     For example, [1, 2, 3] becomes ["1", "2", "3"].
+
+nums = [7, 8, 9]
+strings = []
+i = 0
+while i < nums.length
+  strings << nums[i].to_s
+  i += 1
+end
+p strings
+
+nums2 = [7, 8, 9]
+strings2 = []
+nums2.each do |num|
+  strings2 << num.to_s
+end
+p strings2
+
+nums3 = [7, 8, 9]
+strings3 = nums3.map do |num|
+  num.to_s
+end
+p strings3
