@@ -188,30 +188,52 @@
 #  8. Start with an array of strings and create a new array with each string's first letter only.
 #     For example, ["hello", "goodbye"] becomes ["h", "g"].
 
-strings = ["apple", "banana", "orange"]
-letters = []
-i = 0
-while i < strings.length
-  letters << strings[i][0]
-  i += 1
-end
-p letters
+# strings = ["apple", "banana", "orange"]
+# letters = []
+# i = 0
+# while i < strings.length
+#   letters << strings[i][0]
+#   i += 1
+# end
+# p letters
 
-strings2 = ["apple", "banana", "orange"]
-letters2 = []
-strings2.each do |string|
-  letters2 << string[0]
-end
-p letters2
+# strings2 = ["apple", "banana", "orange"]
+# letters2 = []
+# strings2.each do |string|
+#   letters2 << string[0]
+# end
+# p letters2
 
-strings3 = ["apple", "banana", "orange"]
-letters3 = strings3.map do |string|
-  string[0]
-end
-p letters3
+# strings3 = ["apple", "banana", "orange"]
+# letters3 = strings3.map do |string|
+#   string[0]
+# end
+# p letters3
 
 # 9.  Start with an array of hashes and create a new array of number values from each hash's :age key times 2.
 #     For example, [{name: "Alice", age: 27}, {name: "Blane", age: 16}] becomes [54, 32].
+
+people = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+ages = []
+i = 0
+while i < people.length
+  ages << people[i][:age] * 2
+  i += 1
+end
+p ages
+
+people2 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+ages2 = []
+people2.each do |people|
+  ages2 << people[:age] * 2
+end
+p ages2
+
+people3 = [{name: "Lexa", age: 34}, {name: "Anna", age: 37}, {name: "Ollie", age: 0}]
+ages3 = people3.map do |people|
+  people[:age] * 2
+end
+p ages3
 
 # 10. Start with an array of numbers and create a new array with each number converted into a string.
 #     For example, [1, 2, 3] becomes ["1", "2", "3"].
