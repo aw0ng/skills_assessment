@@ -176,37 +176,62 @@
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
-nums = [8, 23, 0, 44, 1980, 3]
-small_nums = []
-i = 0
-while i < nums.length
-  if nums[i] < 10
-    small_nums << nums[i]
-  end
-  i += 1
-end
-p small_nums
 
-nums2 = [8, 23, 0, 44, 1980, 3]
-small_nums2 = []
-nums2.each do |num|
-  if num < 10
-    small_nums2 << num
-  end
-end
-p small_nums2
+# nums = [8, 23, 0, 44, 1980, 3]
+# small_nums = []
+# i = 0
+# while i < nums.length
+#   if nums[i] < 10
+#     small_nums << nums[i]
+#   end
+#   i += 1
+# end
+# p small_nums
 
-nums3 = [8, 23, 0, 44, 1980, 3]
-small_nums3 = nums3.select do |num|
-  num < 10
-end
-p small_nums3
+# nums2 = [8, 23, 0, 44, 1980, 3]
+# small_nums2 = []
+# nums2.each do |num|
+#   if num < 10
+#     small_nums2 << num
+#   end
+# end
+# p small_nums2
+
+# nums3 = [8, 23, 0, 44, 1980, 3]
+# small_nums3 = nums3.select do |num|
+#   num < 10
+# end
+# p small_nums3
 
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+words = ["big", "little", "good", "bad"]
+no_b = []
+i = 0
+while i < words.length
+  if words[i][0] != "b"
+    no_b << words[i]
+  end
+  i += 1
+end
+p no_b
 
+words2 = ["big", "little", "good", "bad"]
+no_b2 = []
+words2.each do |word|
+  if word[0] != "b"
+    no_b2 << word
+  end
+end
+p no_b2
+
+words3 = ["big", "little", "good", "bad"]
+no_b3 = words3.select do |word|
+  word[0] != "b"
+end
+p no_b3
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
