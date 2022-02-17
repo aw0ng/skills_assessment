@@ -148,43 +148,75 @@
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
 
-items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-short_items = []
-i = 0
-while i < items.length
-  if items[i][:name].length < 6
-    short_items << items[i]
-  end
-  i += 1
-end
-p short_items
+# items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# short_items = []
+# i = 0
+# while i < items.length
+#   if items[i][:name].length < 6
+#     short_items << items[i]
+#   end
+#   i += 1
+# end
+# p short_items
 
-items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-short_items2 = []
-items2.each do |item|
-  if item[:name].length < 6
-    short_items2 << item
-  end
-end
-p short_items2
+# items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# short_items2 = []
+# items2.each do |item|
+#   if item[:name].length < 6
+#     short_items2 << item
+#   end
+# end
+# p short_items2
 
-items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-short_items3 = items3.select do |item|
-  item[:name].length < 6
-end
-p short_items3
+# items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# short_items3 = items3.select do |item|
+#   item[:name].length < 6
+# end
+# p short_items3
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
+nums = [8, 23, 0, 44, 1980, 3]
+small_nums = []
+i = 0
+while i < nums.length
+  if nums[i] < 10
+    small_nums << nums[i]
+  end
+  i += 1
+end
+p small_nums
+
+nums2 = [8, 23, 0, 44, 1980, 3]
+small_nums2 = []
+nums2.each do |num|
+  if num < 10
+    small_nums2 << num
+  end
+end
+p small_nums2
+
+nums3 = [8, 23, 0, 44, 1980, 3]
+small_nums3 = nums3.select do |num|
+  num < 10
+end
+p small_nums3
+
 
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
+
+
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+
+
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
+
+
 
 
 # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/7de16ed43ea506e98df3fa15074b84f8
