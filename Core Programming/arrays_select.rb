@@ -119,34 +119,60 @@
 #  5. Start with an array of strings and create a new array with only the strings shorter than 4 letters.
 #     For example, ["a", "man", "a", "plan", "a", "canal", "panama"] becomes ["a", "man", "a", "a"].
 
-strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
-short_strings = []
-i = 0
-while i < strings.length
-  if strings[i].length < 4
-    short_strings << strings[i]
-  end
-  i += 1
-end
-p short_strings
+# strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
+# short_strings = []
+# i = 0
+# while i < strings.length
+#   if strings[i].length < 4
+#     short_strings << strings[i]
+#   end
+#   i += 1
+# end
+# p short_strings
 
-strings2 = ["a", "man", "a", "plan", "a", "canal", "panama"]
-short_strings2 = []
-strings2.each do |string|
-  if string.length < 4
-    short_strings2 << string
-  end
-end
-p short_strings2
+# strings2 = ["a", "man", "a", "plan", "a", "canal", "panama"]
+# short_strings2 = []
+# strings2.each do |string|
+#   if string.length < 4
+#     short_strings2 << string
+#   end
+# end
+# p short_strings2
 
-strings3 = ["a", "man", "a", "plan", "a", "canal", "panama"]
-short_strings3 = strings3.select do |string|
-  string.length < 4
-end
-p short_strings3
+# strings3 = ["a", "man", "a", "plan", "a", "canal", "panama"]
+# short_strings3 = strings3.select do |string|
+#   string.length < 4
+# end
+# p short_strings3
 
 #  6. Start with an array of hashes and create a new array with only the hashes with names shorter than 6 letters (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "chair", price: 100}, {name: "book", price: 4}].
+
+items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+short_items = []
+i = 0
+while i < items.length
+  if items[i][:name].length < 6
+    short_items << items[i]
+  end
+  i += 1
+end
+p short_items
+
+items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+short_items2 = []
+items2.each do |item|
+  if item[:name].length < 6
+    short_items2 << item
+  end
+end
+p short_items2
+
+items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+short_items3 = items3.select do |item|
+  item[:name].length < 6
+end
+p short_items3
 
 #  7. Start with an array of numbers and create a new array with only the numbers less than 10.
 #     For example, [8, 23, 0, 44, 1980, 3] becomes [8, 0, 3].
