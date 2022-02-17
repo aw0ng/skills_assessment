@@ -207,36 +207,60 @@
 #  8. Start with an array of strings and create a new array with only the strings that don't start with the letter "b".
 #     For example, ["big", "little", "good", "bad"] becomes ["little", "good"].
 
-words = ["big", "little", "good", "bad"]
-no_b = []
-i = 0
-while i < words.length
-  if words[i][0] != "b"
-    no_b << words[i]
-  end
-  i += 1
-end
-p no_b
+# words = ["big", "little", "good", "bad"]
+# no_b = []
+# i = 0
+# while i < words.length
+#   if words[i][0] != "b"
+#     no_b << words[i]
+#   end
+#   i += 1
+# end
+# p no_b
 
-words2 = ["big", "little", "good", "bad"]
-no_b2 = []
-words2.each do |word|
-  if word[0] != "b"
-    no_b2 << word
-  end
-end
-p no_b2
+# words2 = ["big", "little", "good", "bad"]
+# no_b2 = []
+# words2.each do |word|
+#   if word[0] != "b"
+#     no_b2 << word
+#   end
+# end
+# p no_b2
 
-words3 = ["big", "little", "good", "bad"]
-no_b3 = words3.select do |word|
-  word[0] != "b"
-end
-p no_b3
+# words3 = ["big", "little", "good", "bad"]
+# no_b3 = words3.select do |word|
+#   word[0] != "b"
+# end
+# p no_b3
 
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
+items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheap_items = []
+i = 0
+while i < items.length
+  if items[i][:price] < 10
+    cheap_items << items[i]
+  end
+  i += 1
+end
+p cheap_items
 
+items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheap_items2 = []
+items2.each do |item|
+  if item[:price] < 10
+    cheap_items2 << item
+  end
+end
+p cheap_items2
+
+items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheap_items3 = items3.select do |item|
+  item[:price] < 10
+end
+p cheap_items3
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
