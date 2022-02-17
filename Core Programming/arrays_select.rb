@@ -236,37 +236,60 @@
 #  9. Start with an array of hashes and create a new array with only the hashes with prices less than 10 (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes [{name: "pencil", price: 1}, {name: "book", price: 4}].
 
-items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-cheap_items = []
-i = 0
-while i < items.length
-  if items[i][:price] < 10
-    cheap_items << items[i]
-  end
-  i += 1
-end
-p cheap_items
+# items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# cheap_items = []
+# i = 0
+# while i < items.length
+#   if items[i][:price] < 10
+#     cheap_items << items[i]
+#   end
+#   i += 1
+# end
+# p cheap_items
 
-items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-cheap_items2 = []
-items2.each do |item|
-  if item[:price] < 10
-    cheap_items2 << item
-  end
-end
-p cheap_items2
+# items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# cheap_items2 = []
+# items2.each do |item|
+#   if item[:price] < 10
+#     cheap_items2 << item
+#   end
+# end
+# p cheap_items2
 
-items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-cheap_items3 = items3.select do |item|
-  item[:price] < 10
-end
-p cheap_items3
+# items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# cheap_items3 = items3.select do |item|
+#   item[:price] < 10
+# end
+# p cheap_items3
 
 # 10. Start with an array of numbers and create a new array with only the odd numbers.
 #     For example, [2, 4, 5, 1, 8, 9, 7] becomes [5, 1, 9, 7].
 
+nums = [2, 4, 5, 1, 8, 9, 7]
+odds = []
+i = 0
+while i < nums.length
+  if nums[i] % 2 != 0
+    odds << nums[i]
+  end
+  i += 1
+end
+p odds
 
+nums2 = [2, 4, 5, 1, 8, 9, 7]
+odds2 = []
+nums2.each do |num|
+  if num % 2 != 0
+    odds2 << num
+  end
+end
+p odds2
 
+nums3 = [2, 4, 5, 1, 8, 9, 7]
+odds3 = nums3.select do |num|
+  num % 2 != 0
+end
+p odds3
 
 # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/7de16ed43ea506e98df3fa15074b84f8
 # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/a702894841c7018ed8c127b647ae21f8
