@@ -25,6 +25,28 @@ p sum3
 #  2. Start with an array of strings and combine them all into a single string.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "volleyballbasketballbadminton".
 
+strings = ["volleyball", "basketball", "badminton"]
+combined_string = ""
+i = 0
+while i < strings.length
+  combined_string += strings[i]
+  i += 1
+end
+p combined_string
+
+strings2 = ["volleyball", "basketball", "badminton"]
+combined_string2 = ""
+strings2.each do |string|
+  combined_string2 = combined_string2 + string
+end
+p combined_string2
+
+strings3 = ["volleyball", "basketball", "badminton"]
+combined_string3 = strings3.reduce("") do |combined_string3, string|
+  combined_string3 + string
+end
+p combined_string3
+
 #  3. Start with an array of hashes and compute the sum of the prices (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes 105.
 
