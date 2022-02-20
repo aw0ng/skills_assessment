@@ -218,40 +218,70 @@
 #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
 
-items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-shortest = items[0]
-i = 0
-while i < items.length
-  item = items[i]
-  if item[:name].length < shortest[:name].length
-    shortest = item
-  end
-  i += 1
-end
-p shortest
+# items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# shortest = items[0]
+# i = 0
+# while i < items.length
+#   item = items[i]
+#   if item[:name].length < shortest[:name].length
+#     shortest = item
+#   end
+#   i += 1
+# end
+# p shortest
 
-items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-shortest2 = items[0]
-items2.each do | item |
-  if item[:name].length < shortest2[:name].length
-    shortest2 = item
-  end
-end
-p shortest2
+# items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# shortest2 = items[0]
+# items2.each do | item |
+#   if item[:name].length < shortest2[:name].length
+#     shortest2 = item
+#   end
+# end
+# p shortest2
 
-items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-shortest3 = items3.reduce(items3[0]) do | shortest, item |
-  if item[:name].length < shortest[:name].length
-    item
-  else
-    shortest
-  end
-end
-p shortest3
+# items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# shortest3 = items3.reduce(items3[0]) do | shortest, item |
+#   if item[:name].length < shortest[:name].length
+#     item
+#   else
+#     shortest
+#   end
+# end
+# p shortest3
 
 # 10. Start with an array of numbers and compute the maximum number.
 #     For example, [5, 10, 8, 3] becomes 10.
 
+nums = [5, 10, 8, 3]
+max = nums[0]
+i = 0
+while i < nums.length
+  num = nums[i]
+  if num > max
+    max = num
+  end
+  i += 1
+end
+p max
+
+nums2 = [5, 10, 8, 3]
+max2 = nums2[0]
+nums2.each do | num |
+  if num > max2
+    max2 = num
+  end
+end
+p max2
+
+nums3 = [5, 10, 8, 3]
+max3 = nums3.reduce(nums3[0]) do | max, num |
+  if num > max
+    num
+  else
+    max
+  end
+end
+p max3
 
 # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/376c8931a48549889eb3c9bc091e9f43
 # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/379c9945774f51027750c59d6e4395df
