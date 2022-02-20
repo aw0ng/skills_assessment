@@ -134,39 +134,61 @@
 #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
 
-items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-cheapest = items[0]
-i = 0
-while i < items.length
-  item = items[i]
-  if item[:price] < cheapest[:price]
-    cheapest = item
-  end
-  i += 1
-end
-p cheapest
+# items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# cheapest = items[0]
+# i = 0
+# while i < items.length
+#   item = items[i]
+#   if item[:price] < cheapest[:price]
+#     cheapest = item
+#   end
+#   i += 1
+# end
+# p cheapest
 
-items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-cheapest2 = items[0]
-items2.each do |item|
-  if item[:price] < cheapest2[:price]
-    cheapest2 = item
-  end
-end
-p cheapest2
+# items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# cheapest2 = items[0]
+# items2.each do |item|
+#   if item[:price] < cheapest2[:price]
+#     cheapest2 = item
+#   end
+# end
+# p cheapest2
 
-items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
-cheapest3 = items3.reduce(items[0]) do | cheapest3, item|
-  if item[:price] < cheapest3[:price]
-    item
-  else
-    cheapest3
-  end
-end
-p cheapest3
+# items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+# cheapest3 = items3.reduce(items[0]) do | cheapest3, item|
+#   if item[:price] < cheapest3[:price]
+#     item
+#   else
+#     cheapest3
+#   end
+# end
+# p cheapest3
 
 #  7. Start with an array of numbers and compute product of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 1200.
+
+nums = [5, 10, 8, 3] 
+product = nums[0]
+i = 1
+while i < nums.length
+  product = product * nums[i]
+  i += 1
+end
+p product
+
+nums2 = [5, 10, 8, 3] 
+product2 = 1
+nums2.each do |num|
+  product2 = product2 * num
+end
+p product2
+
+nums3 = [5, 10, 8, 3] 
+product3 = nums3.reduce(1) do | product3, num |
+  product3 * num
+end
+p product3
 
 #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
