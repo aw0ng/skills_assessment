@@ -193,30 +193,61 @@
 #  8. Start with an array of strings and combine them all into a single string, separated by dashes.
 #     For example, ["volleyball", "basketball", "badminton"] becomes "-volleyball-basketball-badminton-".
 
-strings = ["volleyball", "basketball", "badminton"]
-single_string = "-"
-i = 0
-while i < strings.length
-  single_string += strings[i] + "-"
-  i += 1
-end
-p single_string
+# strings = ["volleyball", "basketball", "badminton"]
+# single_string = "-"
+# i = 0
+# while i < strings.length
+#   single_string += strings[i] + "-"
+#   i += 1
+# end
+# p single_string
 
-strings2 = ["volleyball", "basketball", "badminton"]
-single_string2 = "-"
-strings2.each do |string|
-  single_string2 += string + "-"
-end
-p single_string2
+# strings2 = ["volleyball", "basketball", "badminton"]
+# single_string2 = "-"
+# strings2.each do |string|
+#   single_string2 += string + "-"
+# end
+# p single_string2
 
-strings3 = ["volleyball", "basketball", "badminton"]
-single_string3 = strings3.reduce("-") do | single_string3, string|
-  single_string3 += string + "-"
-end
-p single_string3
+# strings3 = ["volleyball", "basketball", "badminton"]
+# single_string3 = strings3.reduce("-") do | single_string3, string|
+#   single_string3 += string + "-"
+# end
+# p single_string3
 
 #  9. Start with an array of hashes and find the hash with the shortest name (from the :name key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "book", price: 4}.
+
+items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+shortest = items[0]
+i = 0
+while i < items.length
+  item = items[i]
+  if item[:name].length < shortest[:name].length
+    shortest = item
+  end
+  i += 1
+end
+p shortest
+
+items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+shortest2 = items[0]
+items2.each do | item |
+  if item[:name].length < shortest2[:name].length
+    shortest2 = item
+  end
+end
+p shortest2
+
+items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+shortest3 = items3.reduce(items3[0]) do | shortest, item |
+  if item[:name].length < shortest[:name].length
+    item
+  else
+    shortest
+  end
+end
+p shortest3
 
 # 10. Start with an array of numbers and compute the maximum number.
 #     For example, [5, 10, 8, 3] becomes 10.
