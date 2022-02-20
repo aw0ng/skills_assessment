@@ -109,30 +109,61 @@
 #  5. Start with an array of strings and compute the total length of all the strings.
 #     For example, ["volleyball", "basketball", "badminton"] becomes 29.
 
-strings = ["volleyball", "basketball", "badminton"]
-total = 0
-i = 0
-while i < strings.length
-  total += strings[i].length
-  i += 1
-end
-p total
+# strings = ["volleyball", "basketball", "badminton"]
+# total = 0
+# i = 0
+# while i < strings.length
+#   total += strings[i].length
+#   i += 1
+# end
+# p total
 
-strings2 = ["volleyball", "basketball", "badminton"]
-total2 = 0
-strings2.each do |string|
-  total2 += string.length
-end
-p total2
+# strings2 = ["volleyball", "basketball", "badminton"]
+# total2 = 0
+# strings2.each do |string|
+#   total2 += string.length
+# end
+# p total2
 
-strings3 = ["volleyball", "basketball", "badminton"]
-total3 = strings3.reduce(0) do | total, string |
-  total + string.length
-end
-p total3
+# strings3 = ["volleyball", "basketball", "badminton"]
+# total3 = strings3.reduce(0) do | total, string |
+#   total + string.length
+# end
+# p total3
 
 #  6. Start with an array of hashes and find the hash with the lowest price (from the :price key).
 #     For example, [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}] becomes {name: "pencil", price: 1}.
+
+items = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheapest = items[0]
+i = 0
+while i < items.length
+  item = items[i]
+  if item[:price] < cheapest[:price]
+    cheapest = item
+  end
+  i += 1
+end
+p cheapest
+
+items2 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheapest2 = items[0]
+items2.each do |item|
+  if item[:price] < cheapest2[:price]
+    cheapest2 = item
+  end
+end
+p cheapest2
+
+items3 = [{name: "chair", price: 100}, {name: "pencil", price: 1}, {name: "book", price: 4}]
+cheapest3 = items3.reduce(items[0]) do | cheapest3, item|
+  if item[:price] < cheapest3[:price]
+    item
+  else
+    cheapest3
+  end
+end
+p cheapest3
 
 #  7. Start with an array of numbers and compute product of all the numbers.
 #     For example, [5, 10, 8, 3] becomes 1200.
