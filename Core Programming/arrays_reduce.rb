@@ -252,36 +252,36 @@
 # 10. Start with an array of numbers and compute the maximum number.
 #     For example, [5, 10, 8, 3] becomes 10.
 
-nums = [5, 10, 8, 3]
-max = nums[0]
-i = 0
-while i < nums.length
-  num = nums[i]
-  if num > max
-    max = num
-  end
-  i += 1
-end
-p max
+# nums = [5, 10, 8, 3]
+# max = nums[0]
+# i = 0
+# while i < nums.length
+#   num = nums[i]
+#   if num > max
+#     max = num
+#   end
+#   i += 1
+# end
+# p max
 
-nums2 = [5, 10, 8, 3]
-max2 = nums2[0]
-nums2.each do | num |
-  if num > max2
-    max2 = num
-  end
-end
-p max2
+# nums2 = [5, 10, 8, 3]
+# max2 = nums2[0]
+# nums2.each do | num |
+#   if num > max2
+#     max2 = num
+#   end
+# end
+# p max2
 
-nums3 = [5, 10, 8, 3]
-max3 = nums3.reduce(nums3[0]) do | max, num |
-  if num > max
-    num
-  else
-    max
-  end
-end
-p max3
+# nums3 = [5, 10, 8, 3]
+# max3 = nums3.reduce(nums3[0]) do | max, num |
+#   if num > max
+#     num
+#   else
+#     max
+#   end
+# end
+# p max3
 
 # SOLUTIONS (using while loop): https://gist.github.com/peterxjang/376c8931a48549889eb3c9bc091e9f43
 # SOLUTIONS (using .each shortcut): https://gist.github.com/peterxjang/379c9945774f51027750c59d6e4395df
