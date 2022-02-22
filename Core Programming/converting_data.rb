@@ -64,21 +64,29 @@
 #  6. Convert an array of strings into a hash with keys for each string in the array and values for the number of times the string appears in the array.
 #     For example, ["do", "or", "do", "not"] becomes {"do" => 2, "or" => 1, "not" => 1}.
 
-strings = ["do", "or", "do", "not"]
-strings_hash = {}
-i = 0
-while i < strings.length
-  word = strings[i]
-  if strings_hash[word] == nil
-    strings_hash[word] = 0
-  end
-  strings_hash[word] += 1
-  i += 1
-end
-p strings_hash
+# strings = ["do", "or", "do", "not"]
+# strings_hash = {}
+# i = 0
+# while i < strings.length
+#   word = strings[i]
+#   if strings_hash[word] == nil
+#     strings_hash[word] = 0
+#   end
+#   strings_hash[word] += 1
+#   i += 1
+# end
+# p strings_hash
 
 #  7. Convert a hash into a flat array containing all the hash’s keys and values.
 #     For example, {"a" => 1, "b" => 2, "c" => 3, "d" => 4} becomes ["a", 1, "b", 2, "c", 3, "d", 4].
+
+hash =  {"a" => 1, "b" => 2, "c" => 3, "d" => 4} 
+flat_hash = []
+hash.each do | key, value |
+  flat_hash << key
+  flat_hash << value
+end
+p flat_hash
 
 #  8. Combine data from a hash with names and prices and an array of hashes with names, colors, and weights to make a new hash.
 #     For example, {"chair" => 75, "book" => 15} and [{name: "chair", color: "red", weight: 10}, {name: "book", color: "black", weight: 1}] becomes {"chair" => {price: 75, color: "red", weight: 10}, "book" => {price: 15, color: "black", weight: 1}}.
