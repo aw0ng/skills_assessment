@@ -127,12 +127,12 @@
 # 10. Given a hash, create a new hash that has the keys and values switched.
 #     For example, {"a" => 1, "b" => 2, "c" => 3} becomes {1 => "a", 2 => "b", 3 => "c"}.
 
-letters = {"a" => 1, "b" => 2, "c" => 3}
-numbers = {}
-letters.each do | key, value |
-  numbers[value] = key
-end
-p numbers
+# letters = {"a" => 1, "b" => 2, "c" => 3}
+# numbers = {}
+# letters.each do | key, value |
+#   numbers[value] = key
+# end
+# p numbers
 
 
 # SOLUTIONS: https://gist.github.com/peterxjang/216a7a6e8411ee5c05118e78022f2bc7
