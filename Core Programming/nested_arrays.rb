@@ -152,26 +152,41 @@
 #  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
 #     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
 
-nums = [2, 5, 3, 1, 0, 7, 11]
-ten = false
+# nums = [2, 5, 3, 1, 0, 7, 11]
+# ten = false
+# i = 0
+# while i < nums.length
+#   num1 = nums[i]
+#   j = 0
+#   while j < nums.length
+#     num2 = nums[j]
+#     if i != j
+#       if num1 + num2 == 10
+#         ten = [num1, num2]
+#       end
+#     end
+#     j += 1
+#   end
+#   i += 1
+# end
+# p ten
+
+# 10. Use a nested loop to convert an array of string arrays into a single string.
+#     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+
+strings = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
+string = ""
 i = 0
-while i < nums.length
-  num1 = nums[i]
+while i < strings.length
+  inner = strings[i]
   j = 0
-  while j < nums.length
-    num2 = nums[j]
-    if i != j
-      if num1 + num2 == 10
-        ten = [num1, num2]
-      end
-    end
+  while j < inner.length
+    string += inner[j]
     j += 1
   end
   i += 1
 end
-
-# 10. Use a nested loop to convert an array of string arrays into a single string.
-#     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
+p string
 
 
 # SOLUTIONS: https://gist.github.com/peterxjang/af8985dc4fb07ea14b4bd6ba41cb08f8
