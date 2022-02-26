@@ -76,22 +76,38 @@
 #  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
 #     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
 
-nums = [[1, 3], [8, 9], [2, 16]]
-sum = 0
+# nums = [[1, 3], [8, 9], [2, 16]]
+# sum = 0
+# i = 0
+# while i < nums.length
+#   pair = nums[i]
+#   j = 0
+#   while j < pair.length
+#     sum += pair[j]
+#     j += 1
+#   end
+#   i += 1
+# end
+# p sum
+
+#  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
+#     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+
+nums1 = [1, 2] 
+nums2 = [6, 7, 8]
+nums3 = []
 i = 0
-while i < nums.length
-  pair = nums[i]
+while i < nums1.length
+  num1 = nums1[i]
   j = 0
-  while j < pair.length
-    sum += pair[j]
+  while j < nums2.length
+    num2 = nums2[j]
+    nums3 << num1 + num2
     j += 1
   end
   i += 1
 end
-p sum
-
-#  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
-#     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+p nums3
 
 #  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
 #     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
