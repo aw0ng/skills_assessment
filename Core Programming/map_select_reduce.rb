@@ -6,18 +6,25 @@
 # Input: [1, 2, 3]
 # Output: [8, 9, 10]
 
-nums = [1, 2, 3]
-new_nums = []
-nums.map do |num|
-  new_nums << num + 7
-end
-p new_nums
+# nums = [1, 2, 3]
+# new_nums = []
+# nums.map do |num|
+#   new_nums << num + 7
+# end
+# p new_nums
 
 # #2
 # Write a function that accepts an array of strings and returns an array with each string's length.
 # Example:
 # Input: ["hello", "goodbye"]
 # Output: [5, 7]
+
+strings = ["hello", "goodbye"]
+lengths = []
+strings.map do |string|
+  lengths << string.length
+end
+p lengths
  
 # #3
 # Write a function that accepts an array of numbers and returns an array with each number divided by 2.
