@@ -174,19 +174,19 @@
 # 10. Use a nested loop to convert an array of string arrays into a single string.
 #     For example, [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]] becomes "amanaplanacanalpanama".
 
-strings = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
-string = ""
-i = 0
-while i < strings.length
-  inner = strings[i]
-  j = 0
-  while j < inner.length
-    string += inner[j]
-    j += 1
-  end
-  i += 1
-end
-p string
+# strings = [["a", "man"], ["a", "plan"], ["a", "canal"], ["panama"]]
+# string = ""
+# i = 0
+# while i < strings.length
+#   inner = strings[i]
+#   j = 0
+#   while j < inner.length
+#     string += inner[j]
+#     j += 1
+#   end
+#   i += 1
+# end
+# p string
 
 
 # SOLUTIONS: https://gist.github.com/peterxjang/af8985dc4fb07ea14b4bd6ba41cb08f8
