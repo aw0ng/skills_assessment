@@ -19,18 +19,25 @@
 # Input: ["hello", "goodbye"]
 # Output: [5, 7]
 
-strings = ["hello", "goodbye"]
-lengths = []
-strings.map do |string|
-  lengths << string.length
-end
-p lengths
+# strings = ["hello", "goodbye"]
+# lengths = []
+# strings.map do |string|
+#   lengths << string.length
+# end
+# p lengths
  
 # #3
 # Write a function that accepts an array of numbers and returns an array with each number divided by 2.
 # Example:
 # Input: [1, 2, 3]
 # Output: [0.5, 1.0, 1.5]
+
+nums = [1, 2, 3]
+divided = []
+nums.map do |num|
+  divided << num / 2.0
+end
+p divided
  
 # #4
 # Write a function that accepts an array of strings and returns an array with each string's first letter only.
