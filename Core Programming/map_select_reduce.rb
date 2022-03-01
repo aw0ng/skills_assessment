@@ -106,11 +106,11 @@
 # Input: ["big", "little", "good", "bad"]
 # Output: ["little", "good"]
  
-strings = ["big", "little", "good", "bad"]
-no_b = strings.select do |string|
-  string[0] != "b"
-end
-p no_b
+# strings = ["big", "little", "good", "bad"]
+# no_b = strings.select do |string|
+#   string[0] != "b"
+# end
+# p no_b
 
 # #10
 # Write a function that accepts an array of numbers and returns an array with only the odd numbers.
@@ -118,6 +118,12 @@ p no_b
 # Input: [2, 4, 5, 1, 8, 9, 7]
 # Output: [5, 1, 9, 7]
  
+nums = [2, 4, 5, 1, 8, 9, 7]
+odds = nums.select do |num|
+  num % 2 != 0
+end
+p odds
+
 # #11
 # Write a function that accepts an array of numbers and returns the sum of all the numbers.
 # Example:
