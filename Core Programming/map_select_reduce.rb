@@ -45,11 +45,11 @@
 # Input: ["hello", "goodbye"]
 # Output: ["h", "g"]
  
-strings = ["hello", "goodbye"]
-letters = strings.map do |string|
-  string[0]
-end
-p letters
+# strings = ["hello", "goodbye"]
+# letters = strings.map do |string|
+#   string[0]
+# end
+# p letters
 
 # #5
 # Write a function that accepts an array of numbers and returns an array with each number converted into a string.
@@ -57,18 +57,24 @@ p letters
 # Input: [1, 2, 3]
 # Output: ["1", "2", "3"]
 
-nums = [1, 2, 3]
-strings = []
-nums.map do |num|
-  strings << num.to_s
-end
-p strings
+# nums = [1, 2, 3]
+# strings = []
+# nums.map do |num|
+#   strings << num.to_s
+# end
+# p strings
  
 # #6
 # Write a function that accepts an array of numbers and returns a new array with only the even numbers.
 # Example:
 # Input: [2, 4, 5, 1, 8, 9, 7]
 # Output: [2, 4, 8]
+
+nums = [2, 4, 5, 1, 8, 9, 7]
+evens = nums.select do |num|
+  num % 2 == 0
+end
+p evens
  
 # #7
 # Write a function that accepts an array of strings and returns an array with only the strings shorter than 4 letters.
