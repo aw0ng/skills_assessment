@@ -56,6 +56,13 @@ p letters
 # Example:
 # Input: [1, 2, 3]
 # Output: ["1", "2", "3"]
+
+nums = [1, 2, 3]
+strings = []
+nums.map do |num|
+  strings << num.to_s
+end
+p strings
  
 # #6
 # Write a function that accepts an array of numbers and returns a new array with only the even numbers.
