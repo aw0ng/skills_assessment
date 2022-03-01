@@ -94,11 +94,11 @@
 # Input: [8, 23, 0, 44, 1980, 3]
 # Output: [8, 0, 3]
 
-nums = [8, 23, 0, 44, 1980, 3]
-less_than = nums.select do |num|
-  num < 10
-end
-p less_than
+# nums = [8, 23, 0, 44, 1980, 3]
+# less_than = nums.select do |num|
+#   num < 10
+# end
+# p less_than
  
 # #9
 # Write a function that accepts an array of strings and returns an array with only the strings that don't start with the letter "b".
@@ -106,6 +106,12 @@ p less_than
 # Input: ["big", "little", "good", "bad"]
 # Output: ["little", "good"]
  
+strings = ["big", "little", "good", "bad"]
+no_b = strings.select do |string|
+  string[0] != "b"
+end
+p no_b
+
 # #10
 # Write a function that accepts an array of numbers and returns an array with only the odd numbers.
 # Example:
