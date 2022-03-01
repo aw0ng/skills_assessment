@@ -70,17 +70,23 @@
 # Input: [2, 4, 5, 1, 8, 9, 7]
 # Output: [2, 4, 8]
 
-nums = [2, 4, 5, 1, 8, 9, 7]
-evens = nums.select do |num|
-  num % 2 == 0
-end
-p evens
+# nums = [2, 4, 5, 1, 8, 9, 7]
+# evens = nums.select do |num|
+#   num % 2 == 0
+# end
+# p evens
  
 # #7
 # Write a function that accepts an array of strings and returns an array with only the strings shorter than 4 letters.
 # Example:
 # Input: ["a", "man", "a", "plan", "a", "canal", "panama"]
 # Output: ["a", "man", "a", "a"]
+
+strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
+short_strings = strings.select do |string|
+  string.length < 4
+end
+p short_strings
  
 # #8
 # Write a function that accepts an array of numbers and returns an array with only the numbers less than 10.
