@@ -82,17 +82,23 @@
 # Input: ["a", "man", "a", "plan", "a", "canal", "panama"]
 # Output: ["a", "man", "a", "a"]
 
-strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
-short_strings = strings.select do |string|
-  string.length < 4
-end
-p short_strings
+# strings = ["a", "man", "a", "plan", "a", "canal", "panama"]
+# short_strings = strings.select do |string|
+#   string.length < 4
+# end
+# p short_strings
  
 # #8
 # Write a function that accepts an array of numbers and returns an array with only the numbers less than 10.
 # Example:
 # Input: [8, 23, 0, 44, 1980, 3]
 # Output: [8, 0, 3]
+
+nums = [8, 23, 0, 44, 1980, 3]
+less_than = nums.select do |num|
+  num < 10
+end
+p less_than
  
 # #9
 # Write a function that accepts an array of strings and returns an array with only the strings that don't start with the letter "b".
