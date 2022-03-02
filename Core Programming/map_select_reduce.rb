@@ -143,14 +143,14 @@
 # Input: [5, 3, 8, 10]
 # Output: 3
 
-nums = [5, 3, 8, 10]
-smallest = nums[0]
-nums.select do |num|
-  if num < smallest
-    smallest = num
-  end
-end
-p smallest
+# nums = [5, 3, 8, 10]
+# smallest = nums[0]
+# nums.select do |num|
+#   if num < smallest
+#     smallest = num
+#   end
+# end
+# p smallest
 
 # #13
 # Write a function that accepts an array of strings and returns the total length of all the strings.
@@ -158,6 +158,13 @@ p smallest
 # Input: ["volleyball", "basketball", "badminton"]
 # Output: 29
  
+strings = ["volleyball", "basketball", "badminton"]
+total_length = 0
+strings.map do |string|
+  total_length += string.length
+end
+p total_length
+
 # #14
 # Write a function that accepts an array of strings and returns a single string that combines all the individual strings separated by dashes.
 # Example:
