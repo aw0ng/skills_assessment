@@ -171,18 +171,27 @@
 # Input: ["volleyball", "basketball", "badminton"]
 # Output: "volleyball-basketball-badminton"
 
-strings = ["volleyball", "basketball", "badminton"]
-big_string = ""
-strings.map do |string|
-  big_string += string + "-"
-end
-p big_string
+# strings = ["volleyball", "basketball", "badminton"]
+# big_string = ""
+# strings.map do |string|
+#   big_string += string + "-"
+# end
+# p big_string
  
 # #15
 # Write a function that accepts an array of numbers and returns the greatest number.
 # Example:
 # Input: [5, 10, 8, 3]
 # Output: 10
+
+nums = [5, 10, 8, 3]
+greatest = 0
+nums.map do |num|
+  if num > greatest
+    greatest = num
+  end
+end
+p greatest
 
 # #16
 # Write a function that accepts an array of numbers and returns an array with each number increased by 7.
