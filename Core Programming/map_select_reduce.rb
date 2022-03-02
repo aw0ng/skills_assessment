@@ -130,19 +130,28 @@
 # Input: [5, 10, 8, 3]
 # Output: 26
 
-nums = [5, 10, 8, 3]
-sum = 0
-nums.map do |num|
-  sum += num
-end
-p sum
+# nums = [5, 10, 8, 3]
+# sum = 0
+# nums.map do |num|
+#   sum += num
+# end
+# p sum
 
 # #12
 # Write a function that accepts an array of numbers and returns the smallest number.
 # Example:
 # Input: [5, 3, 8, 10]
 # Output: 3
- 
+
+nums = [5, 3, 8, 10]
+smallest = nums[0]
+nums.select do |num|
+  if num < smallest
+    smallest = num
+  end
+end
+p smallest
+
 # #13
 # Write a function that accepts an array of strings and returns the total length of all the strings.
 # Example:
