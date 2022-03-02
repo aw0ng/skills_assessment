@@ -158,18 +158,25 @@
 # Input: ["volleyball", "basketball", "badminton"]
 # Output: 29
  
-strings = ["volleyball", "basketball", "badminton"]
-total_length = 0
-strings.map do |string|
-  total_length += string.length
-end
-p total_length
+# strings = ["volleyball", "basketball", "badminton"]
+# total_length = 0
+# strings.map do |string|
+#   total_length += string.length
+# end
+# p total_length
 
 # #14
 # Write a function that accepts an array of strings and returns a single string that combines all the individual strings separated by dashes.
 # Example:
 # Input: ["volleyball", "basketball", "badminton"]
 # Output: "volleyball-basketball-badminton"
+
+strings = ["volleyball", "basketball", "badminton"]
+big_string = ""
+strings.map do |string|
+  big_string += string + "-"
+end
+p big_string
  
 # #15
 # Write a function that accepts an array of numbers and returns the greatest number.
