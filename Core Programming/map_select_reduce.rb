@@ -118,18 +118,25 @@
 # Input: [2, 4, 5, 1, 8, 9, 7]
 # Output: [5, 1, 9, 7]
  
-nums = [2, 4, 5, 1, 8, 9, 7]
-odds = nums.select do |num|
-  num % 2 != 0
-end
-p odds
+# nums = [2, 4, 5, 1, 8, 9, 7]
+# odds = nums.select do |num|
+#   num % 2 != 0
+# end
+# p odds
 
 # #11
 # Write a function that accepts an array of numbers and returns the sum of all the numbers.
 # Example:
 # Input: [5, 10, 8, 3]
 # Output: 26
- 
+
+nums = [5, 10, 8, 3]
+sum = 0
+nums.map do |num|
+  sum += num
+end
+p sum
+
 # #12
 # Write a function that accepts an array of numbers and returns the smallest number.
 # Example:
