@@ -184,20 +184,27 @@
 # Input: [5, 10, 8, 3]
 # Output: 10
 
-nums = [5, 10, 8, 3]
-greatest = 0
-nums.map do |num|
-  if num > greatest
-    greatest = num
-  end
-end
-p greatest
+# nums = [5, 10, 8, 3]
+# greatest = 0
+# nums.map do |num|
+#   if num > greatest
+#     greatest = num
+#   end
+# end
+# p greatest
 
 # #16
 # Write a function that accepts an array of numbers and returns an array with each number increased by 7.
 # Example:
 # Input: [1, 2, 3]
 # Output: [8, 9, 10]
+
+nums = [1, 2, 3]
+seven = []
+nums.map do |num|
+  seven << num + 7
+end
+p seven
  
 # #17
 # Write a function that accepts an array of strings and returns an array with each string's length.
