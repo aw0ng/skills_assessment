@@ -8,20 +8,32 @@
 # Input: [3, 4, 5, 6]
 # Output: [12, 15, 18, 20, 24, 30]
 # Explanation: (3 * 4, 3 * 5, 3 * 6, 4 * 5, 4 * 6, 5 * 6)
-                # 0, 1   0, 2    0, 3  1, 2   1 , 3  2, 3
 
 # nums = [3, 4, 5, 6]
 # products = []
 # i = 0
-# i2 = 1
 # while i < nums.length
 #   num1 = nums[i]
-#   num2 = nums[i2]
-
+#   i2 = 1
+#   while i2 < nums.length
+#     num2 = nums[i2]
+#     if num1 != num2
+#       p num1
+#       p num2
+#       products << num1 * num2
+#     end
+#     i2 += 1
+#   end
 #   i += 1
-#   i2 += 1
 # end
 # p products
+
+# 3,4 0, 1
+# 3,5 0, 2
+# 3,6 0, 3
+# 4,5 1, 2
+# 4,6 1, 3
+# 5,6 2, 3
  
 # #2
 # Write a function that accepts two arrays of numbers, and returns an array of the products of every number from the first array multiplied by every number of the second array:
@@ -30,21 +42,21 @@
 # Output: [3, 4, 5, 6, 8, 10]
 # Explanation: (1 * 3, 1 * 4, 1 * 5, 2 * 3, 2 * 4, 2 * 5)
 
-nums1 = [1, 2]
-nums2 = [3, 4, 5]
-products = []
-i = 0
-while i < nums1.length
-  num1 = nums1[i]
-  i2 = 0
-  while i2 < nums2.length
-    num2 = nums2[i2]
-    products << num1 * num2
-    i2 += 1
-  end
-  i += 1
-end
-p products
+# nums1 = [1, 2]
+# nums2 = [3, 4, 5]
+# products = []
+# i = 0
+# while i < nums1.length
+#   num1 = nums1[i]
+#   i2 = 0
+#   while i2 < nums2.length
+#     num2 = nums2[i2]
+#     products << num1 * num2
+#     i2 += 1
+#   end
+#   i += 1
+# end
+# p products
  
 # #3
 # Write a function that accepts an array of numbers and returns true or false, depending on whether there is a pair of two numbers that add up to 10.
@@ -57,6 +69,25 @@ p products
 # Input: [1, 2, 3, 4]
 # Output: false (because there is no combination of two numbers that add up to 10)
  
+nums = [2, 4, 6, 7]
+pairs = false
+i = 0
+while i < nums.length
+  num1 = nums[i]
+  i2 = 1
+  while i2 < nums.length
+    num2 = nums[i2]
+    if num1 + num2 == 10
+      pairs = true
+    else 
+      return pairs
+    end
+    i2 += 1
+  end
+  i += 1
+end
+p pairs
+
 # #4
 # Write a function that accepts an array of numbers, and returns the largest product of any pair of numbers within a given array.
  
