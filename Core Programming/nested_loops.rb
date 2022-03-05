@@ -96,24 +96,24 @@
 # Output: 63
 # Explanation: (This is -9 * -7)
 
-nums = [5, -2, 1, -9, -7, 2, 6] 
-largest = 0
-i = 0
-while i < nums.length
-  num1 = nums[i]
-  i2 = 0
-  while i2 < nums.length
-    num2 = nums[i2]
-    if i != i2
-      if largest < num1 * num2
-        largest = num1 * num2
-      end
-    end
-    i2 += 1
-  end
-  i += 1
-end
-p largest
+# nums = [5, -2, 1, -9, -7, 2, 6] 
+# largest = 0
+# i = 0
+# while i < nums.length
+#   num1 = nums[i]
+#   i2 = 0
+#   while i2 < nums.length
+#     num2 = nums[i2]
+#     if i != i2
+#       if largest < num1 * num2
+#         largest = num1 * num2
+#       end
+#     end
+#     i2 += 1
+#   end
+#   i += 1
+# end
+# p largest
  
 # #5
 # Write a function that accepts two arrays of numbers, and returns the largest sum of a number from the first array added to a number from the second array.
@@ -122,6 +122,30 @@ p largest
 # Input: Two arrays: [5, 2, 1], [7, 8, 4, 1]
 # Output: 13
 # Explanation: (5 from the first array + 8 from the second array)
+
+nums1 = [5, 2, 1]
+nums2 = [7, 8, 4, 1]
+largest_1 = 0
+largest_2 = 0
+largest_sum = 0
+i = 0
+while i < nums1.length
+  num1 = nums1[i]
+  if largest_1 < num1
+    largest_1 = num1
+  end
+  i2 = 0
+  while i2 < nums2.length
+    num2 = nums2[i2]
+    if largest_2 < num2
+      largest_2 = num2
+    end
+    largest_sum = largest_1 + largest_2
+    i2 += 1
+  end
+  i += 1
+end
+p largest_sum
  
 # #6
 # Write a function that accepts two arrays of numbers, and returns an array that is the “intersection” of the two arrays, meaning an array of the numbers that are shared by the two original arrays.
