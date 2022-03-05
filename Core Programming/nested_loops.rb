@@ -69,24 +69,24 @@
 # Input: [1, 2, 3, 4]
 # Output: false (because there is no combination of two numbers that add up to 10)
  
-nums = [2, 4, 6, 7]
-pairs = false
-i = 0
-while i < nums.length
-  num1 = nums[i]
-  i2 = 1
-  while i2 < nums.length
-    num2 = nums[i2]
-    if num1 + num2 == 10
-      pairs = true
-    else 
-      return pairs
-    end
-    i2 += 1
-  end
-  i += 1
-end
-p pairs
+# nums = [2, 4, 6, 7]
+# pairs = false
+# i = 0
+# while i < nums.length
+#   num1 = nums[i]
+#   i2 = 1
+#   while i2 < nums.length
+#     num2 = nums[i2]
+#     if num1 + num2 == 10
+#       pairs = true
+#     else 
+#       return pairs
+#     end
+#     i2 += 1
+#   end
+#   i += 1
+# end
+# p pairs
 
 # #4
 # Write a function that accepts an array of numbers, and returns the largest product of any pair of numbers within a given array.
@@ -95,6 +95,25 @@ p pairs
 # Input: [5, -2, 1, -9, -7, 2, 6] 
 # Output: 63
 # Explanation: (This is -9 * -7)
+
+nums = [5, -2, 1, -9, -7, 2, 6] 
+largest = 0
+i = 0
+while i < nums.length
+  num1 = nums[i]
+  i2 = 0
+  while i2 < nums.length
+    num2 = nums[i2]
+    if i != i2
+      if largest < num1 * num2
+        largest = num1 * num2
+      end
+    end
+    i2 += 1
+  end
+  i += 1
+end
+p largest
  
 # #5
 # Write a function that accepts two arrays of numbers, and returns the largest sum of a number from the first array added to a number from the second array.
