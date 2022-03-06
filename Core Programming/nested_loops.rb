@@ -123,29 +123,29 @@
 # Output: 13
 # Explanation: (5 from the first array + 8 from the second array)
 
-nums1 = [5, 2, 1]
-nums2 = [7, 8, 4, 1]
-largest_1 = 0
-largest_2 = 0
-largest_sum = 0
-i = 0
-while i < nums1.length
-  num1 = nums1[i]
-  if largest_1 < num1
-    largest_1 = num1
-  end
-  i2 = 0
-  while i2 < nums2.length
-    num2 = nums2[i2]
-    if largest_2 < num2
-      largest_2 = num2
-    end
-    largest_sum = largest_1 + largest_2
-    i2 += 1
-  end
-  i += 1
-end
-p largest_sum
+# nums1 = [5, 2, 1]
+# nums2 = [7, 8, 4, 1]
+# largest_1 = 0
+# largest_2 = 0
+# largest_sum = 0
+# i = 0
+# while i < nums1.length
+#   num1 = nums1[i]
+#   if largest_1 < num1
+#     largest_1 = num1
+#   end
+#   i2 = 0
+#   while i2 < nums2.length
+#     num2 = nums2[i2]
+#     if largest_2 < num2
+#       largest_2 = num2
+#     end
+#     largest_sum = largest_1 + largest_2
+#     i2 += 1
+#   end
+#   i += 1
+# end
+# p largest_sum
  
 # #6
 # Write a function that accepts two arrays of numbers, and returns an array that is the “intersection” of the two arrays, meaning an array of the numbers that are shared by the two original arrays.
@@ -154,6 +154,24 @@ p largest_sum
 # Output: [2, 4] (or [4, 2])
 # Explanation: 2 and 4 are the only values shared by both input arrays.
  
+nums1 = [5, 4, 3, 2, 1]
+nums2 = [0, 2, 4, 6]
+same = []
+i = 0
+while i < nums1.length
+  num1 = nums1[i]
+  i2 = 0
+  while i2 < nums2.length
+    num2 = nums2[i2]
+    if num1 == num2
+      same << num1
+    end
+    i2 += 1
+  end
+  i += 1
+end
+p same
+
 # #7
 # Write a function that accepts an array of numbers, and returns the first duplicate value.
  
