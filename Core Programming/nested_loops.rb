@@ -154,26 +154,45 @@
 # Output: [2, 4] (or [4, 2])
 # Explanation: 2 and 4 are the only values shared by both input arrays.
  
-nums1 = [5, 4, 3, 2, 1]
-nums2 = [0, 2, 4, 6]
-same = []
-i = 0
-while i < nums1.length
-  num1 = nums1[i]
-  i2 = 0
-  while i2 < nums2.length
-    num2 = nums2[i2]
-    if num1 == num2
-      same << num1
-    end
-    i2 += 1
-  end
-  i += 1
-end
-p same
+# nums1 = [5, 4, 3, 2, 1]
+# nums2 = [0, 2, 4, 6]
+# same = []
+# i = 0
+# while i < nums1.length
+#   num1 = nums1[i]
+#   i2 = 0
+#   while i2 < nums2.length
+#     num2 = nums2[i2]
+#     if num1 == num2
+#       same << num1
+#     end
+#     i2 += 1
+#   end
+#   i += 1
+# end
+# p same
 
 # #7
 # Write a function that accepts an array of numbers, and returns the first duplicate value.
  
 # Example: [5, 7, 8, 9, 8, 2, 1]
 # Output: 8 (since there are two 8’s in the array)
+
+nums = [5, 7, 8, 9, 8, 2, 1]
+first = 0
+i = 0
+while i < nums.length
+  num = nums[i]
+  i2 = 0
+  while i2 < nums.length
+    dupe = nums[i2]
+    if i != i2
+      if num == dupe
+        first = dupe
+      end
+    end
+    i2 += 1
+  end
+  i += 1
+end
+p first
