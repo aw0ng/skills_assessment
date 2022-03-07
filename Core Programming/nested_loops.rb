@@ -28,12 +28,9 @@
 # end
 # p products
 
-# 3,4 0, 1
-# 3,5 0, 2
-# 3,6 0, 3
-# 4,5 1, 2
-# 4,6 1, 3
-# 5,6 2, 3
+# 34, 35, 36, 45, 46, 54, 56, 64, 65
+# 01, 02, 03, 12, 13, 22, 23, 31, 32
+                     # X       X  X
  
 # #2
 # Write a function that accepts two arrays of numbers, and returns an array of the products of every number from the first array multiplied by every number of the second array:
@@ -178,21 +175,21 @@
 # Example: [5, 7, 8, 9, 8, 2, 1]
 # Output: 8 (since there are two 8’s in the array)
 
-nums = [5, 7, 8, 9, 8, 2, 1]
-first = 0
-i = 0
-while i < nums.length
-  num = nums[i]
-  i2 = 0
-  while i2 < nums.length
-    dupe = nums[i2]
-    if i != i2
-      if num == dupe
-        first = dupe
-      end
-    end
-    i2 += 1
-  end
-  i += 1
-end
-p first
+# nums = [5, 7, 8, 9, 8, 2, 1]
+# first = 0
+# i = 0
+# while i < nums.length
+#   num = nums[i]
+#   i2 = 0
+#   while i2 < nums.length
+#     dupe = nums[i2]
+#     if i != i2
+#       if num == dupe
+#         first = dupe
+#       end
+#     end
+#     i2 += 1
+#   end
+#   i += 1
+# end
+# p first
