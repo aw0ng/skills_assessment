@@ -5,12 +5,13 @@
 # The following hash table represents a particular person: { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
 # Write a function that accepts this type of hash table and returns the person's email address.
 
-
- 
 # Example:
 # Input: { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
 # Output: "ada.lovelace@email.com"
  
+person = { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
+p person[:email]
+
 # #2
 # The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 }
 # Write a function that accepts a hash table like this and adds 200 shirts to the "yellow" category. The function can then return the updated hash table.
