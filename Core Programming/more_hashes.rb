@@ -9,29 +9,50 @@
 # Input: { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
 # Output: "ada.lovelace@email.com"
  
-person = { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
-def email(hash)
-  hash[:email]
-end
-p email(person)
+# person = { firstName: "Ada", lastName: "Lovelace", email: "ada.lovelace@email.com" }
+# def email(hash)
+#   hash[:email]
+# end
+# p email(person)
 
 # #2
 # The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 }
 # Write a function that accepts a hash table like this and adds 200 shirts to the "yellow" category. The function can then return the updated hash table.
  
-inventory = { red: 500, blue: 615, green: 484, yellow: 332 }
-def add(hash)
-  hash[:yellow] + 200
-end
-p add(inventory)
+# inventory = { red: 500, blue: 615, green: 484, yellow: 332 }
+# def add(hash)
+#   hash[:yellow] + 200
+# end
+# p add(inventory)
 
 # #3
 # The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 } (same as previous exercise)
 # Write a function that accepts 3 parameters: The hash table, a string representing a brand new color, and a number of how many new color shirts there are. The function should then add this color and its number to the hash table, and then return the updated hash table.
+
+# inventory = { red: 500, blue: 615, green: 484, yellow: 332 }
+# def update(hash, _color, number)
+#   hash[:color] = number
+#   return hash
+# end
+# p update(inventory, "brown", 143)
  
 # #4
 # The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 } (same as previous exercise)
 # Write a function that accepts a hash table like this and returns the total number of shirts in inventory.
+
+inventory = { red: 500, blue: 615, green: 484, yellow: 332 }
+def total(hash)
+  quantities = []
+  hash.each do |_color, price|
+    quantities << price
+  end
+  total = 0
+  quantities.map do |num|
+    total += num
+  end
+  return total
+end
+p total(inventory)
  
 # #5
 # The following hash table represents the inventory of shirts for a clothing store: { red: 500, blue: 615, green: 484, yellow: 332 } (same as previous exercise)
